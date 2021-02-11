@@ -6,7 +6,7 @@ from random import randint
 from youtubesearchpython import SearchVideos
 from multiprocessing import Process
 
-bot  =  telepotpro . Bot ( "https://api.telegram.org/bot1690696524:AAH1pfx5ikQCm7DMr3fA-hX5uPOZyg5GVtQ/Getme" )
+bot  =  telepotpro . Bot ( "1690696524:AAH1pfx5ikQCm7DMr3fA-hX5uPOZyg5GVtQ" )
 class Chat:
 	def __init__(self, chat_id, text, msg):
 		self.msg = msg
