@@ -56,7 +56,7 @@ class Chat:
 		msg += f"🤖 Hola, {self.msg['from']['first_name']} ! \n\n"
 		msg += '📩 Envia: "*/music* _Nombre de la Musica_"  or\n\n'
 		msg += '"*/music* _musician name - song name_" \n\n'
-		msg += "Pedir alguna musica 🎶"
+		msg += "Para pedir alguna musica 🎶"
 
 		self.sendMessage(msg)
 		pass
@@ -85,14 +85,14 @@ class Chat:
 			}
 
 			self.sendMessage(f"🎵 {title} \n🔗 {link}")#erro aqui
-			DownloadingMsg = self.sendMessage('⬇️ Descargando... '+'\n_(this may take a while.)_')
+			DownloadingMsg = self.sendMessage('⬇️ Descargando... '+'\n_(Esto puede tardar un breve momento.)_')
 
 			with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 				info_dict = ydl.extract_info(link, download=True) 
 
 			bot.sendAudio(self.chat_id,audio=open(file_name,'rb'))
 			bot.deleteMessage((self.chat_id, DownloadingMsg['message_id']))
-			self.sendMessage( '✅ Sucess!')
+			self.sendMessage( '✅ Descarga Exitosa!')
 			print ("Sucess!")
 			os.remove(file_name)
 		pass
