@@ -47,21 +47,21 @@ class Chat:
 		pass
 
 	def error(self):
-		self.sendMessage('‼️ Disculpa! Comando Invalido!\n'+'Prueba : "*/musica* _Nombre de la Musica_"\n'+'o: "*/musica* _musician name - song name_"')
+		self.sendMessage('‼️ Disculpa! Comando Invalido!\n'+'Prueba : "*/music* _Nombre de la Musica_"\n'+'o: "*/music* _musician name - song name_"')
 		pass
 
 	## Commands
 	def start(self):
 		msg = str()
 		msg += f"🤖 Hola, {self.msg['from']['first_name']} ! \n\n"
-		msg += '📩 Envia: "*/musica* _Nombre de la Musica_"  or\n\n'
-		msg += '"*/musica* _musician name - song name_" \n\n'
+		msg += '📩 Envia: "*/music* _Nombre de la Musica_"  or\n\n'
+		msg += '"*/music* _musician name - song name_" \n\n'
 		msg += "Pedir alguna musica 🎶"
 
 		self.sendMessage(msg)
 		pass
 
-	def musica(self):
+	def music(self):
 		if self.body_command != '':
 
 			search = SearchVideos(self.body_command, offset = 1, mode = "json", max_results = 1)
